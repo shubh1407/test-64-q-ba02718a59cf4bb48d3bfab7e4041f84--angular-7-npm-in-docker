@@ -143,10 +143,11 @@
         </button>
       </div>
       <div class="modal-body">
-        <button type="button" (click)="deleteLead(deleteId)"  class="btn btn-primary update_lead_btn" style="margin-left:150px;background-color: red;color: white;">Delete</button>
+        <form class="delete_lead_form">
+        <button type="button" (click)="deleteLead(deleteId)"  class="btn btn-primary  delete_lead_btn" style="margin-left:150px;background-color: red;color: white;">Delete</button>
 
          <button type="button" class="btn btn-secondary" data-dismiss="modal" style="margin-left:20px;background-color: black;color: white;">Cancel</button>
-        
+        </form>
       </div>
       <div class="modal-footer">
        
