@@ -64,27 +64,27 @@
         <form #myForm="ngForm" class="add_lead_form">
           <div class="row">
             <div class="col">
-              <h5>First Name</h5>
+              <h5>First Name <span class="required">*</span></h5> 
                <input type="text" class="form-control" name="first_name" id="first_name" required  [(ngModel)]="leadLists.first_name" /> 
             </div>
             <div class="col">
-            <h5>Last Name</h5>
+            <h5>Last Name <span class="required">*</span></h5> 
               <input type="text" class="form-control" name="last_name" id="last_name" required  [(ngModel)]="leadLists.last_name" />
             </div>
           </div>
           <div class="row">
             <div class="col">
-              <h5>Email Address</h5>
+              <h5>Email Address <span class="required">*</span></h5> 
               <input type="text" class="form-control" name="email" id="email" required  [(ngModel)]="leadLists.email" />
             </div>
             <div class="col">
-              <h5>Mobile</h5>
+              <h5>Mobile<span class="required">*</span></h5> 
               <input type="text" class="form-control" name="mobile" id="mobile" required [(ngModel)]="leadLists.mobile" />
             </div>
           </div>
           <div class="row">
             <div class="col">
-              <h5>Location Type</h5>
+              <h5>Location Type<span class="required">*</span></h5> 
           <select name="location_type" style="height: 35px !important;" class="form-control" required [(ngModel)]="leadLists.location_type">
             <option value="State">State</option>
             <option value="City">City</option>
@@ -92,7 +92,7 @@
           </select> 
             </div>
             <div class="col">
-              <h5>Location String</h5>
+              <h5>Location String<span class="required">*</span></h5>
               <input type="text"  class="form-control"  name="location_string" id="location_string" required [(ngModel)]="leadLists.location_string" />
             </div>
           </div>
