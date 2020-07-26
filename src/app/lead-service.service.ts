@@ -8,16 +8,16 @@ import { environment } from 'src/environments/environment';
 })
 export class LeadServiceService {
 
-  public url:String;
+  public url:string;
   constructor(
-    private httpClient : HttpClient
+    private readonly httpClient : HttpClient
   ) { 
     this.url=environment.apiUrl
   }
 
 retrieveAllLeads()
   {
-      return this.httpClient.get<LeadList[]>(`${this.url}/api/leads/?location_string=India`)
+      return this.httpClient.get<LeadList[]>(`${this.url}/api/leads/?location_string=India`);
   }
 
   deleteLeadById(id)

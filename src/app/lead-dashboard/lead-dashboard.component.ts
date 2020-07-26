@@ -3,31 +3,31 @@ import { LeadServiceService } from '../lead-service.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
 export class LeadList {
-  public id: number;
+    public id: number;
     public updated_at: Date;
     public created_at: Date;
-    public first_name : String;
-    public last_name : String;
+    public first_name : string;
+    public last_name : string;
     public mobile : number;
-    public email : String;
-    public location_type : String;
-    public location_string : String;
-    public status : String;
-    public communication : String;
-    public tags : String;
+    public email : string;
+    public location_type : string;
+    public location_string : string;
+    public status : string;
+    public communication : string;
+    public tags : string;
   constructor(
     id: number,
     updated_at: Date,
     created_at: Date,
-    first_name : String,
-    last_name : String,
+    first_name : string,
+    last_name : string,
     mobile : number,
-    email : String,
-    location_type : String,
-    location_string : String,
-    status : String,
-    communication : String,
-    tags : String
+    email : string,
+    location_type : string,
+    location_string : string,
+    status : string,
+    communication : string,
+    tags : string
   ) {
     this.id=id;
     this.first_name=first_name;
@@ -41,8 +41,8 @@ export class LeadList {
 }
 
 export class MarkLead{
-  public communication : String;
-  constructor(communication : String)
+  public communication : string;
+  constructor(communication : string)
   {
     this.communication=communication;
   }
@@ -60,8 +60,8 @@ export class LeadDashboardComponent implements OnInit {
   @ViewChild('deleteclosebutton') deleteclosebutton;
   leadLists : LeadList;
   markLead: MarkLead;
-  constructor(private leadService : LeadServiceService,private actroute: ActivatedRoute,
-    private router : Router) { }
+  constructor(private readonly leadService : LeadServiceService,private readonly actroute: ActivatedRoute,
+    private readonly router : Router) { }
 
   ngOnInit() {
     
@@ -76,13 +76,13 @@ export class LeadDashboardComponent implements OnInit {
   row2 = 'Email';
   row3 = 'Mobile Num';
   row4 = 'Location Type';
-  row5 = 'Location String';
+  row5 = 'Location string';
   row6 = 'Action';
 
   leads: LeadList[];
-  communication: String;
-  updateId: String;
-  deleteId: String;
+  communication: string;
+  updateId: string;
+  deleteId: string;
   fetchAllLeads()
   {
     this.leadService.retrieveAllLeads().subscribe(
